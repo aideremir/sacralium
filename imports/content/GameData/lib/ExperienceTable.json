@@ -1,0 +1,240 @@
+[
+  {
+    "level": 0,
+    "sublevel": 0,
+    "exp": 0,
+    "bonus": {
+      "attributesPoints": 3,
+      "money": {
+        "Currency/Dinar": 0
+      }
+    }
+  },
+  {
+    "level": 0,
+    "sublevel": 1,
+    "exp": 50,
+    "bonus": {
+      "attributesPoints": 1,
+      "money": {
+        "Currency/Ether": 100,
+        "Currency/Dinar": 5
+      }
+    }
+  },
+  {
+    "level": 1,
+    "sublevel": 0,
+    "exp": 100,
+    "bonus": {
+      "attributesPoints": 3,
+      "money": {
+        "Currency/Ether": 100,
+        "Currency/Dinar": 10
+      }
+    }
+  },
+  {
+    "level": 1,
+    "sublevel": 1,
+    "exp": 200,
+    "bonus": {
+      "attributesPoints": 1,
+      "money": {
+        "Currency/Ether": 100,
+        "Currency/Dinar": 10
+      }
+    }
+  },
+  {
+    "level": 1,
+    "sublevel": 2,
+    "exp": 400,
+    "bonus": {
+      "attributesPoints": 1,
+      "money": {
+        "Currency/Ether": 100,
+        "Currency/Dinar": 10
+      }
+    }
+  },
+  {
+    "level": 2,
+    "sublevel": 0,
+    "exp": 800,
+    "bonus": {
+      "attributesPoints": 3,
+      "money": {
+        "Currency/Ether": 100,
+        "Currency/Dinar": 25
+      }
+    }
+  },
+  {
+    "level": 2,
+    "sublevel": 1,
+    "exp": 1400,
+    "bonus": {
+      "attributesPoints": 1,
+      "money": {
+        "Currency/Ether": 100,
+        "Currency/Dinar": 15
+      }
+    }
+  },
+  {
+    "level": 2,
+    "sublevel": 2,
+    "exp": 2000,
+    "bonus": {
+      "attributesPoints": 1,
+      "money": {
+        "Currency/Ether": 100,
+        "Currency/Dinar": 15
+      }
+    }
+  },
+  {
+    "level": 2,
+    "sublevel": 3,
+    "exp": 3000,
+    "bonus": {
+      "attributesPoints": 1,
+      "money": {
+        "Currency/Ether": 100,
+        "Currency/Dinar": 15
+      }
+    }
+  },
+  {
+    "level": 2,
+    "sublevel": 4,
+    "exp": 4000,
+    "bonus": {
+      "attributesPoints": 1,
+      "money": {
+        "Currency/Ether": 100,
+        "Currency/Dinar": 50
+      }
+    }
+  },
+  {
+    "level": 3,
+    "sublevel": 0,
+    "exp": 5000,
+    "bonus": {
+      "attributesPoints": 3,
+      "money": {
+        "Currency/Ether": 100,
+        "Currency/Dinar": 50
+      }
+    }
+  },
+  {
+    "level": 3,
+    "sublevel": 1,
+    "exp": 7000,
+    "bonus": {
+      "attributesPoints": 1,
+      "money": {
+        "Currency/Ether": 100,
+        "Currency/Dinar": 50
+      }
+    }
+  },
+  {
+    "level": 3,
+    "sublevel": 2,
+    "exp": 9000,
+    "bonus": {
+      "attributesPoints": 1,
+      "money": {
+        "Currency/Ether": 100,
+        "Currency/Dinar": 50
+      }
+    }
+  },
+  {
+    "level": 3,
+    "sublevel": 3,
+    "exp": 11000,
+    "bonus": {
+      "attributesPoints": 1,
+      "money": {
+        "Currency/Dinar": 50
+      }
+    }
+  },
+  {
+    "level": 3,
+    "sublevel": 4,
+    "exp": 13000,
+    "bonus": {
+      "attributesPoints": 1,
+      "money": {
+        "Currency/Ether": 100,
+        "Currency/Dinar": 50
+      }
+    }
+  },
+  {
+    "level": 3,
+    "sublevel": 5,
+    "exp": 15000,
+    "bonus": {
+      "attributesPoints": 1,
+      "money": {
+        "Currency/Ether": 100,
+        "Currency/Dinar": 50
+      }
+    }
+  },
+  {
+    "level": 4,
+    "sublevel": 0,
+    "exp": 20000,
+    "bonus": {
+      "attributesPoints": 3,
+      "money": {
+        "Currency/Ether": 100,
+        "Currency/Dinar": 50
+      }
+    }
+  },
+  {
+    "level": 4,
+    "sublevel": 1,
+    "exp": 25000,
+    "bonus": {
+      "attributesPoints": 1,
+      "money": {
+        "Currency/Ether": 100,
+        "Currency/Dinar": 50
+      }
+    }
+  },
+  {
+    "level": 4,
+    "sublevel": 2,
+    "exp": 150000,
+    "bonus": {
+      "attributesPoints": 1,
+      "money": {
+        "Currency/Ether": 100,
+        "Currency/Dinar": 50
+      }
+    }
+  },
+  {
+    "level": 4,
+    "sublevel": 3,
+    "exp": 300000,
+    "bonus": {
+      "attributesPoints": 1,
+      "money": {
+        "Currency/Ether": 100,
+        "Currency/Dinar": 100
+      }
+    }
+  }
+]

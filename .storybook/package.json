@@ -1,0 +1,24 @@
+{
+  "name": "sacralium_storybook",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "@babel/core": "^7.2.2",
+    "@storybook/addon-viewport": "^4.1.6",
+    "@storybook/addon-options": "^4.1.11",
+    "@storybook/addon-actions": "^4.1.11",
+    "@storybook/vue": "^4.1.6",
+    "storybook-readme": "^4.0.5",
+    "babel-loader": "^8.0.5",
+    "babel-preset-vue": "^2.0.2",
+    "pug": "^2.0.3",
+    "pug-plain-loader": "^1.0.0",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.2",
+    "postcss-loader": "^3.0.0",
+    "autoprefixer":"^9.4.7",
+    "storybook-vue-router": "^1.0.2",
+    "vue-loader": "^15.5.1",
+    "vue-template-compiler": "2.5.22"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "public": {
+    "chatMessageMaxLength": 175
+  },
+  "private": {
+    "facebook": {
+      "appId": "xxx",
+      "secret": "xxx"
+    },
+    "google": {
+      "clientId": "xxx",
+      "secret": "xxx"
+    },
+    "vk": {
+      "appId": "xxx",
+      "secret": "xxx"
+    },
+    "chatHistoryLength": 10,
+    "blankCharacter": {
+      "level": 0,
+      "experience": 0,
+      "money": {
+        "Currency/Dinar": 0,
+        "Currency/Ether": 0
+      }
+    },
+    "mail": {
+      "protocol": "smtp",
+      "username": "***",
+      "password": "***",
+      "server":   "smtp.gmail.com",
+      "port": 25,
+      "from": "*** <***@***>",
+      "sitename": "***"
+    }
+  }
+}

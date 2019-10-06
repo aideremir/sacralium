@@ -1,0 +1,27 @@
+{
+  "ItemCategory": {
+    "Item/All": "Все",
+    "Item/Armor": "Броня",
+    "Item/Armor/Belt": "Пояса",
+    "Item/Armor/Body": "Броня",
+    "Item/Armor/Boots": "Ботинки",
+    "Item/Armor/Bracers": "Наручи",
+    "Item/Armor/Gloves": "Перчатки",
+    "Item/Armor/Helmet": "Шлема",
+    "Item/Armor/Leggins": "Поножи",
+    "Item/Armor/Shield": "Щиты",
+    "Item/Armor/ShoulderPads": "Наплечи",
+    "Item/Weapon": "Оружие",
+    "Item/Weapon/Axe": "Топоры",
+    "Item/Weapon/Sword": "Мечи",
+    "Item/Weapon/Mace": "Дубины",
+    "Item/Weapon/Knife": "Кинжалы"
+  },
+  "ItemElement": {
+    "Universe": "Вселенная",
+    "Earth": "Земля",
+    "Water": "Вода",
+    "Fire": "Огонь",
+    "Air": "Воздух"
+  }
+}

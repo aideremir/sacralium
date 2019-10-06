@@ -1,0 +1,90 @@
+image: zav39/meteor_build:latest
+
+definitions:
+  steps:
+    - step: &Install_dependencies
+        name: Установка NPM пакетов
+        caches:
+          - node
+        artifacts:
+            - node_modules/**
+        script:
+            - meteor npm install
+            - meteor npm install .storybook
+    - step: &Lint
+        name: Проверка кода EsLint'ом
+        script:
+            - meteor npm run lint
+    - step: &Build_storybook
+        name: Сборка storybook и выгрузка на FTP
+        artifacts:
+            - .out/**
+        script:
+            - meteor npm run storybook-build
+            - lftp -u $storybook_user,$storybook_password $storybook_host -e "set ftp:ssl-allow no; mirror -e -R -p ./.out/ $storybook_path ; quit"
+    - step: &Build_server_only
+        name: Сборка серверной части приложения
+        caches:
+          - gradle
+        artifacts:
+            - build/**
+        script:
+            - meteor build ./build/ --architecture os.linux.x86_64 --server-only --allow-superuser
+    - step: &Build_app
+        name: Сборка приложения и APK
+        caches:
+          - gradle
+        artifacts:
+            - build/**
+        script:
+            - meteor build ./build/ --architecture os.linux.x86_64 --server=$production_url --allow-superuser
+    - step: &Sign_and_upload_apk
+        name: Подпись и выгрузка APK
+        script:
+            - cd build/android/project/build/outputs/apk/release
+            # TODO: импортировать ключ вместо генерации нового каждый раз
+            - keytool -genkey -noprompt -alias sacralium -dname "CN=ru.morula, OU=Morula, O=Morula, L=Kaliningrad, S=Kaliningrad, C=RU" -keystore keystore -storepass password -keypass password -keyalg RSA -keysize 2048 -validity 10000
+            - jarsigner -verbose -keystore keystore -storepass password -sigalg SHA1withRSA -digestalg SHA1 android-release-unsigned.apk sacralium
+            - $ANDROID_HOME/build-tools/27.0.0/zipalign 4 android-release-unsigned.apk sacralium.apk
+            - FILENAME="${BITBUCKET_BRANCH}-$(date +"%y%m%d")-${BITBUCKET_BUILD_NUMBER}.apk"
+            - mv sacralium.apk $FILENAME
+            - curl -X POST "https://${BB_AUTH_STRING}@api.bitbucket.org/2.0/repositories/${BITBUCKET_REPO_OWNER}/${BITBUCKET_REPO_SLUG}/downloads" --form files=@"$FILENAME"
+    - step: &Deploy_to_production
+        name: Выгрузка на продакшен
+        deployment: production
+        trigger: manual
+        script:
+            - cd build
+            - FILENAME="${BITBUCKET_BRANCH}-$(date +"%y%m%d")-${BITBUCKET_BUILD_NUMBER}"
+            - mv build.tar.gz $FILENAME.tar.gz
+            - scp -P $production_ssh_port $FILENAME.tar.gz $production_user@$production_host:~/app/
+            - ssh -p $production_ssh_port $production_user@$production_host "cd ~/app; mkdir $FILENAME && tar xf $FILENAME.tar.gz -C $FILENAME/ && cd $FILENAME/bundle && (cd programs/server && npm install) && cd programs/web.browser/ && gzip -9 -k *.js && cd ~/app/ && ln -sfn $FILENAME ~/app/current && pm2 stop all && pm2 delete all && pm2 start pm2.config.js --node-args='--max-old-space-size=4096'"
+
+pipelines:
+  pull-requests:
+    '**': # Check lint on every request
+      - step: *Install_dependencies
+      - step: *Lint
+  custom:
+    Обновить Storybook:
+      - step: *Install_dependencies
+      - step: *Build_storybook
+    Собрать APK для Android:
+      - step: *Install_dependencies
+      - step: *Build_app
+      - step: *Sign_and_upload_apk
+    Обновить сайт:
+      - step: *Install_dependencies
+      - step: *Build_server_only
+      - step: *Deploy_to_production
+    Обновить сайт и собрать APK:
+      - step: *Install_dependencies
+      - step: *Build_app
+      - step: *Sign_and_upload_apk
+      - step: *Deploy_to_production
+    Сделать всё:
+      - step: *Install_dependencies
+      - step: *Build_storybook
+      - step: *Build_app
+      - step: *Sign_and_upload_apk
+      - step: *Deploy_to_production

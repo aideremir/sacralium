@@ -1,0 +1,73 @@
+@require './variables/all'
+
+body
+  margin 0
+  padding 0
+
+  font-family -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif
+  font-size 13px
+
+  color $color_text
+  background-color $color_background
+  -webkit-tap-highlight-color rgba(0,0,0,0)
+  -webkit-tap-highlight-color transparent // https://stackoverflow.com/questions/20853238/webkit-tap-highlight-color-is-not-working
+  overscroll-behavior none
+
+.buttonClose
+  cursor pointer
+
+  position absolute
+  top 15px
+  right @top
+
+  display block
+  width 22px
+  height @width
+  box-sizing border-box
+
+  background linear-gradient(360deg, #F0F1F1 0%, rgba(#FFF,0) 100%);
+  border 1px solid #C0C3C5
+  border-radius 3px
+  outline none
+
+  &:before
+  &:after
+    content ''
+
+    position absolute
+    left 50%
+    top 50%
+
+    display block
+    width 14px
+    height 2px
+    background rgba(#000,.9)
+    transition background .3s ease
+
+  &:before
+    transform translate(-50%,-50%) rotate(45deg)
+
+  &:after
+    transform translate(-50%,-50%) rotate(-45deg)
+
+  &:active:before
+  &:active:after
+    background $color_gray
+
+@keyframes fade
+  0%
+    opacity 0
+  100%
+    opacity 1
+
+.fade-enter-active
+  animation fade .1s ease
+
+.fade-leave-active
+  animation fade .1s ease reverse
+
+.fade-enter
+  opacity .5
+
+.fade-leave-to
+  opacity 0

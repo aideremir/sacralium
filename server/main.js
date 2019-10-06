@@ -1,0 +1,16 @@
+import '/imports/modules/Character/server/publications';
+import '/imports/modules/Character/server/methods';
+import '/imports/modules/Chat/server/methods';
+import '/imports/modules/Chat/server/publications';
+import '/imports/modules/Combat/server/jobProcessor';
+import '/imports/modules/Combat/server/methods';
+import '/imports/modules/Combat/server/publications';
+import '/imports/modules/CombatRequest/server/methods';
+import '/imports/modules/CombatRequest/server/publications';
+import '/imports/modules/Core/lib/validation';
+import '/imports/modules/Core/server/Agenda';
+import '/imports/modules/Inventory/server/methods';
+import '/imports/modules/Inventory/server/publications';
+import '/imports/modules/User/server/accountMerge';
+import '/imports/modules/User/server/collection';
+import '/imports/modules/User/server/methods';

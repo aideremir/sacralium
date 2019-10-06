@@ -1,0 +1,48 @@
+{
+  "Water": {
+    "Attribute/Primary/Strength": 0,
+    "Attribute/Primary/Dexterity": 0,
+    "Attribute/Primary/Intuition": 2,
+    "Attribute/Primary/Endurance": 0,
+    "Attribute/Secondary/Critical": 40,
+    "Attribute/Secondary/AntiCritical": 20,
+    "Attribute/Secondary/Dodge": 0,
+    "Attribute/Secondary/AntiDodge": 10,
+    "Attribute/Health": 0
+  },
+  "Fire": {
+    "Attribute/Primary/Strength": 0,
+    "Attribute/Primary/Dexterity": 2,
+    "Attribute/Primary/Intuition": 0,
+    "Attribute/Primary/Endurance": 0,
+    "Attribute/Secondary/Critical": 0,
+    "Attribute/Secondary/AntiCritical": 10,
+    "Attribute/Secondary/Dodge": 40,
+    "Attribute/Secondary/AntiDodge": 20,
+    "Attribute/Health": 0
+  },
+  "Air": {
+    "Attribute/Primary/Strength": 0,
+    "Attribute/Primary/Dexterity": 1,
+    "Attribute/Primary/Intuition": 1,
+    "Attribute/Primary/Endurance": 0,
+    "Attribute/Secondary/Critical": 20,
+    "Attribute/Secondary/AntiCritical": 15,
+    "Attribute/Secondary/Dodge": 20,
+    "Attribute/Secondary/AntiDodge": 15,
+    "Attribute/Health": 0
+  },
+  "Earth": {
+    "Attribute/ArmorPassive/Torso": { "min": 1, "max": 3 },
+    "Attribute/ArmorPassive/Waist": { "min": 1, "max": 3 },
+    "Attribute/Primary/Strength": 2,
+    "Attribute/Primary/Dexterity": 0,
+    "Attribute/Primary/Intuition": 0,
+    "Attribute/Primary/Endurance": 0,
+    "Attribute/Secondary/Critical": 0,
+    "Attribute/Secondary/AntiCritical": 30,
+    "Attribute/Secondary/Dodge": 0,
+    "Attribute/Secondary/AntiDodge": 30,
+    "Attribute/Health": 20
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "name": "sacralium",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "if [ ! -f settings.json ]; then cp settings.sample.json settings.json; fi; meteor run --settings settings.json",
+    "lint": "eslint \"**/*.{js,vue}\"",
+    "storybook": "start-storybook -s ./public -p 9001 -c .storybook",
+    "storybook-build": "build-storybook -s ./public -c .storybook -o .out"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.1.5",
+    "agenda": "^2.0.2",
+    "await-to-js": "^2.1.1",
+    "lodash": "^4.17.11",
+    "meteor-node-stubs": "^0.4.1",
+    "validate.js": "^0.12.0",
+    "vue": "2.5.22",
+    "vue-meteor-tracker": "^2.0.0-beta.5",
+    "vue-router": "^3.0.0",
+    "vue2-touch-events": "^1.1.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.3.4",
+    "@babel/plugin-proposal-optional-chaining": "^7.2.0",
+    "@meteorjs/eslint-config-meteor": "^1.0.5",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.12.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-import-resolver-meteor": "^0.4.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-meteor": "^5.1.0",
+    "eslint-plugin-react": "^7.12.3",
+    "eslint-plugin-vue": "^5.1.0"
+  }
+}
