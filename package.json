@@ -12,7 +12,7 @@
     "@babel/runtime": "^7.1.5",
     "agenda": "^2.0.2",
     "await-to-js": "^2.1.1",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.21",
     "meteor-node-stubs": "^0.4.1",
     "validate.js": "^0.12.0",
     "vue": "2.5.22",
